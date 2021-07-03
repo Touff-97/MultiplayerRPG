@@ -1,0 +1,512 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Fonts/Montserrat_40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Fonts/Montserrat_18.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenes/MainScenes/PlayerStats.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/SupportScenes/Minus.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/SupportScenes/Plus.tscn" type="PackedScene" id=5]
+
+[node name="PlayerStats" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.05945
+margin_bottom = -3.05945
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_left = 0.344
+anchor_top = 0.083
+anchor_right = 0.656
+anchor_bottom = 0.917
+margin_left = -0.320007
+margin_top = 0.239998
+margin_right = 0.319946
+margin_bottom = -0.240051
+rect_min_size = Vector2( 400, 600 )
+color = Color( 0.231373, 0.231373, 0.231373, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 65
+custom_constants/margin_top = 35
+custom_constants/margin_left = 65
+custom_constants/margin_bottom = 35
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="Background/Margin"]
+margin_left = 65.0
+margin_top = 35.0
+margin_right = 335.0
+margin_bottom = 565.0
+custom_constants/separation = 20
+
+[node name="Title" type="Label" parent="Background/Margin/VBox"]
+margin_right = 270.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 1 )
+text = "Stats"
+align = 1
+valign = 1
+
+[node name="ClassRaceLevel" type="HBoxContainer" parent="Background/Margin/VBox"]
+margin_top = 70.0
+margin_right = 270.0
+margin_bottom = 93.0
+
+[node name="RaceClass" type="Label" parent="Background/Margin/VBox/ClassRaceLevel"]
+margin_right = 145.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 2 )
+text = "Regular Human"
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/ClassRaceLevel"]
+margin_left = 149.0
+margin_right = 195.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Lvl"
+align = 2
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/ClassRaceLevel"]
+margin_left = 199.0
+margin_right = 242.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 43, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Filler" type="Panel" parent="Background/Margin/VBox/ClassRaceLevel"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 246.0
+margin_right = 270.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 24, 0 )
+
+[node name="HSeparator" type="HSeparator" parent="Background/Margin/VBox"]
+margin_top = 113.0
+margin_right = 270.0
+margin_bottom = 117.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" type="VBoxContainer" parent="Background/Margin/VBox"]
+margin_top = 137.0
+margin_right = 270.0
+margin_bottom = 193.0
+custom_constants/separation = 10
+
+[node name="Reputation" type="HBoxContainer" parent="Background/Margin/VBox/Player"]
+margin_right = 270.0
+margin_bottom = 23.0
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/Player/Reputation"]
+margin_right = 195.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Reputation"
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/Player/Reputation"]
+margin_left = 199.0
+margin_right = 242.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 43, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Filler" type="Panel" parent="Background/Margin/VBox/Player/Reputation"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 246.0
+margin_right = 270.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 24, 0 )
+
+[node name="StatPoints" type="HBoxContainer" parent="Background/Margin/VBox/Player"]
+margin_top = 33.0
+margin_right = 270.0
+margin_bottom = 56.0
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/Player/StatPoints"]
+margin_right = 195.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Stat Points"
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/Player/StatPoints"]
+margin_left = 199.0
+margin_right = 242.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 43, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Filler" type="Panel" parent="Background/Margin/VBox/Player/StatPoints"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 246.0
+margin_right = 270.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 24, 0 )
+
+[node name="HSeparator2" type="HSeparator" parent="Background/Margin/VBox"]
+margin_top = 213.0
+margin_right = 270.0
+margin_bottom = 217.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stats" type="VBoxContainer" parent="Background/Margin/VBox"]
+margin_top = 237.0
+margin_right = 270.0
+margin_bottom = 524.0
+custom_constants/separation = 10
+
+[node name="Health" type="HBoxContainer" parent="Background/Margin/VBox/Stats"]
+margin_right = 270.0
+margin_bottom = 23.0
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/Stats/Health"]
+margin_right = 166.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Health"
+
+[node name="Values" type="HBoxContainer" parent="Background/Margin/VBox/Stats/Health"]
+margin_left = 170.0
+margin_right = 270.0
+margin_bottom = 23.0
+
+[node name="Minus" parent="Background/Margin/VBox/Stats/Health/Values" groups=[
+"minus",
+] instance=ExtResource( 4 )]
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/Stats/Health/Values" groups=[
+"stat_value",
+]]
+margin_left = 27.0
+margin_right = 73.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 46, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Plus" parent="Background/Margin/VBox/Stats/Health/Values" groups=[
+"plus",
+] instance=ExtResource( 5 )]
+
+[node name="Strength" type="HBoxContainer" parent="Background/Margin/VBox/Stats"]
+margin_top = 33.0
+margin_right = 270.0
+margin_bottom = 56.0
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/Stats/Strength"]
+margin_right = 166.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Strength"
+
+[node name="Values" type="HBoxContainer" parent="Background/Margin/VBox/Stats/Strength"]
+margin_left = 170.0
+margin_right = 270.0
+margin_bottom = 23.0
+
+[node name="Minus" parent="Background/Margin/VBox/Stats/Strength/Values" groups=[
+"minus",
+] instance=ExtResource( 4 )]
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/Stats/Strength/Values" groups=[
+"stat_value",
+]]
+margin_left = 27.0
+margin_right = 73.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 46, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Plus" parent="Background/Margin/VBox/Stats/Strength/Values" groups=[
+"plus",
+] instance=ExtResource( 5 )]
+
+[node name="Defense" type="HBoxContainer" parent="Background/Margin/VBox/Stats"]
+margin_top = 66.0
+margin_right = 270.0
+margin_bottom = 89.0
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/Stats/Defense"]
+margin_right = 166.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Defense"
+
+[node name="Values" type="HBoxContainer" parent="Background/Margin/VBox/Stats/Defense"]
+margin_left = 170.0
+margin_right = 270.0
+margin_bottom = 23.0
+
+[node name="Minus" parent="Background/Margin/VBox/Stats/Defense/Values" groups=[
+"minus",
+] instance=ExtResource( 4 )]
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/Stats/Defense/Values" groups=[
+"stat_value",
+]]
+margin_left = 27.0
+margin_right = 73.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 46, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Plus" parent="Background/Margin/VBox/Stats/Defense/Values" groups=[
+"plus",
+] instance=ExtResource( 5 )]
+
+[node name="Speed" type="HBoxContainer" parent="Background/Margin/VBox/Stats"]
+margin_top = 99.0
+margin_right = 270.0
+margin_bottom = 122.0
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/Stats/Speed"]
+margin_right = 166.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Speed"
+
+[node name="Values" type="HBoxContainer" parent="Background/Margin/VBox/Stats/Speed"]
+margin_left = 170.0
+margin_right = 270.0
+margin_bottom = 23.0
+
+[node name="Minus" parent="Background/Margin/VBox/Stats/Speed/Values" groups=[
+"minus",
+] instance=ExtResource( 4 )]
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/Stats/Speed/Values" groups=[
+"stat_value",
+]]
+margin_left = 27.0
+margin_right = 73.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 46, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Plus" parent="Background/Margin/VBox/Stats/Speed/Values" groups=[
+"plus",
+] instance=ExtResource( 5 )]
+
+[node name="Stamina" type="HBoxContainer" parent="Background/Margin/VBox/Stats"]
+margin_top = 132.0
+margin_right = 270.0
+margin_bottom = 155.0
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/Stats/Stamina"]
+margin_right = 166.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Stamina"
+
+[node name="Values" type="HBoxContainer" parent="Background/Margin/VBox/Stats/Stamina"]
+margin_left = 170.0
+margin_right = 270.0
+margin_bottom = 23.0
+
+[node name="Minus" parent="Background/Margin/VBox/Stats/Stamina/Values" groups=[
+"minus",
+] instance=ExtResource( 4 )]
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/Stats/Stamina/Values" groups=[
+"stat_value",
+]]
+margin_left = 27.0
+margin_right = 73.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 46, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Plus" parent="Background/Margin/VBox/Stats/Stamina/Values" groups=[
+"plus",
+] instance=ExtResource( 5 )]
+
+[node name="Endurance" type="HBoxContainer" parent="Background/Margin/VBox/Stats"]
+margin_top = 165.0
+margin_right = 270.0
+margin_bottom = 188.0
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/Stats/Endurance"]
+margin_right = 166.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Endurance"
+
+[node name="Values" type="HBoxContainer" parent="Background/Margin/VBox/Stats/Endurance"]
+margin_left = 170.0
+margin_right = 270.0
+margin_bottom = 23.0
+
+[node name="Minus" parent="Background/Margin/VBox/Stats/Endurance/Values" groups=[
+"minus",
+] instance=ExtResource( 4 )]
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/Stats/Endurance/Values" groups=[
+"stat_value",
+]]
+margin_left = 27.0
+margin_right = 73.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 46, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Plus" parent="Background/Margin/VBox/Stats/Endurance/Values" groups=[
+"plus",
+] instance=ExtResource( 5 )]
+
+[node name="Dexterity" type="HBoxContainer" parent="Background/Margin/VBox/Stats"]
+margin_top = 198.0
+margin_right = 270.0
+margin_bottom = 221.0
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/Stats/Dexterity"]
+margin_right = 166.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Dexterity"
+
+[node name="Values" type="HBoxContainer" parent="Background/Margin/VBox/Stats/Dexterity"]
+margin_left = 170.0
+margin_right = 270.0
+margin_bottom = 23.0
+
+[node name="Minus" parent="Background/Margin/VBox/Stats/Dexterity/Values" groups=[
+"minus",
+] instance=ExtResource( 4 )]
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/Stats/Dexterity/Values" groups=[
+"stat_value",
+]]
+margin_left = 27.0
+margin_right = 73.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 46, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Plus" parent="Background/Margin/VBox/Stats/Dexterity/Values" groups=[
+"plus",
+] instance=ExtResource( 5 )]
+
+[node name="Accuracy" type="HBoxContainer" parent="Background/Margin/VBox/Stats"]
+margin_top = 231.0
+margin_right = 270.0
+margin_bottom = 254.0
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/Stats/Accuracy"]
+margin_right = 166.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Accuracy"
+
+[node name="Values" type="HBoxContainer" parent="Background/Margin/VBox/Stats/Accuracy"]
+margin_left = 170.0
+margin_right = 270.0
+margin_bottom = 23.0
+
+[node name="Minus" parent="Background/Margin/VBox/Stats/Accuracy/Values" groups=[
+"minus",
+] instance=ExtResource( 4 )]
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/Stats/Accuracy/Values" groups=[
+"stat_value",
+]]
+margin_left = 27.0
+margin_right = 73.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 46, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Plus" parent="Background/Margin/VBox/Stats/Accuracy/Values" groups=[
+"plus",
+] instance=ExtResource( 5 )]
+
+[node name="Luck" type="HBoxContainer" parent="Background/Margin/VBox/Stats"]
+margin_top = 264.0
+margin_right = 270.0
+margin_bottom = 287.0
+
+[node name="StatName" type="Label" parent="Background/Margin/VBox/Stats/Luck"]
+margin_right = 166.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Luck"
+
+[node name="Values" type="HBoxContainer" parent="Background/Margin/VBox/Stats/Luck"]
+margin_left = 170.0
+margin_right = 270.0
+margin_bottom = 23.0
+
+[node name="Minus" parent="Background/Margin/VBox/Stats/Luck/Values" groups=[
+"minus",
+] instance=ExtResource( 4 )]
+
+[node name="StatValue" type="Label" parent="Background/Margin/VBox/Stats/Luck/Values" groups=[
+"stat_value",
+]]
+margin_left = 27.0
+margin_right = 73.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 46, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Plus" parent="Background/Margin/VBox/Stats/Luck/Values" groups=[
+"plus",
+] instance=ExtResource( 5 )]

@@ -1,0 +1,124 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Fonts/Montserrat_18.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Fonts/Montserrat_40.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenes/MainScenes/SkillTree.gd" type="Script" id=3]
+
+[node name="SkillTree" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.471924
+margin_right = -0.471924
+mouse_filter = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_left = 0.016
+anchor_top = 0.083
+anchor_right = 0.328
+anchor_bottom = 0.917
+margin_left = -0.480001
+margin_top = 0.239998
+margin_right = 0.159973
+margin_bottom = -0.240051
+rect_min_size = Vector2( 400, 600 )
+mouse_filter = 2
+color = Color( 0.231373, 0.231373, 0.231373, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_constants/margin_right = 65
+custom_constants/margin_top = 35
+custom_constants/margin_left = 65
+custom_constants/margin_bottom = 35
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="Background/Margin"]
+margin_left = 65.0
+margin_top = 35.0
+margin_right = 335.0
+margin_bottom = 565.0
+size_flags_horizontal = 5
+custom_constants/separation = 17
+
+[node name="Title" type="Label" parent="Background/Margin/VBox"]
+margin_right = 270.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 2 )
+text = "Skills"
+align = 1
+valign = 1
+
+[node name="TabButtons" type="HBoxContainer" parent="Background/Margin/VBox"]
+margin_top = 67.0
+margin_right = 270.0
+margin_bottom = 96.0
+custom_constants/separation = 10
+
+[node name="UtilitySkills" type="Button" parent="Background/Margin/VBox/TabButtons"]
+margin_right = 82.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Utility"
+
+[node name="CombatSkills" type="Button" parent="Background/Margin/VBox/TabButtons"]
+margin_left = 92.0
+margin_right = 177.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Combat"
+
+[node name="MagicSkills" type="Button" parent="Background/Margin/VBox/TabButtons"]
+margin_left = 187.0
+margin_right = 270.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Magic"
+
+[node name="HSeparator2" type="HSeparator" parent="Background/Margin/VBox"]
+margin_top = 113.0
+margin_right = 270.0
+margin_bottom = 117.0
+
+[node name="Utility" type="VBoxContainer" parent="Background/Margin/VBox"]
+margin_top = 134.0
+margin_right = 270.0
+margin_bottom = 530.0
+size_flags_vertical = 3
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Combat" type="VBoxContainer" parent="Background/Margin/VBox"]
+visible = false
+margin_top = 127.0
+margin_right = 270.0
+margin_bottom = 323.0
+size_flags_vertical = 3
+custom_constants/separation = 5
+
+[node name="Magic" type="VBoxContainer" parent="Background/Margin/VBox"]
+visible = false
+margin_top = 127.0
+margin_right = 270.0
+margin_bottom = 530.0
+size_flags_vertical = 3
+custom_constants/separation = 5
+
+[connection signal="pressed" from="Background/Margin/VBox/TabButtons/UtilitySkills" to="." method="_on_UtilitySkills_pressed"]
+[connection signal="pressed" from="Background/Margin/VBox/TabButtons/CombatSkills" to="." method="_on_CombatSkills_pressed"]
+[connection signal="pressed" from="Background/Margin/VBox/TabButtons/MagicSkills" to="." method="_on_MagicSkills_pressed"]

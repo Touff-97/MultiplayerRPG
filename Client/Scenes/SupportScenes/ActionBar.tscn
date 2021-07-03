@@ -1,0 +1,106 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Fonts/Montserrat_12.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Fonts/Montserrat_18.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/UI/Heart.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/SupportScenes/ActionBar.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.14902, 0.87451, 0.12549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.392157 )
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0.0313726, 0.827451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0.392157 )
+
+[node name="ActionBar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = -0.445435
+margin_right = 1.0
+margin_bottom = -0.445435
+mouse_filter = 2
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="."]
+margin_left = 0.943909
+margin_top = 40.0
+margin_right = 1280.94
+margin_bottom = 632.0
+mouse_filter = 2
+custom_constants/margin_right = 200
+custom_constants/margin_top = 500
+custom_constants/margin_left = 200
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+margin_left = 200.0
+margin_top = 500.0
+margin_right = 1080.0
+margin_bottom = 592.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ActionBar" type="Label" parent="Margin/VBox"]
+margin_right = 880.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 2 )
+text = "Regular - Level 1 -  Swordsmanship"
+align = 1
+valign = 1
+
+[node name="ExperienceBar" type="ProgressBar" parent="Margin/VBox"]
+margin_left = 190.0
+margin_top = 27.0
+margin_right = 690.0
+margin_bottom = 43.0
+rect_min_size = Vector2( 500, 0 )
+mouse_filter = 2
+size_flags_horizontal = 4
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+value = 80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillBar" type="ProgressBar" parent="Margin/VBox"]
+margin_left = 240.0
+margin_top = 47.0
+margin_right = 640.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 400, 0 )
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+value = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hearts" type="TextureRect" parent="Margin/VBox"]
+margin_left = 411.0
+margin_top = 67.0
+margin_right = 469.0
+margin_bottom = 92.0
+rect_min_size = Vector2( 58, 0 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource( 3 )
+stretch_mode = 2

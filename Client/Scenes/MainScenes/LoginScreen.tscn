@@ -1,0 +1,169 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Fonts/Montserrat_40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Fonts/Montserrat_18.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/Fonts/Montserrat-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/MainScenes/LoginScreen.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Fonts/Montserrat_24.tres" type="DynamicFont" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+outline_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="LoginScreen" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -225.0
+margin_right = 200.0
+margin_bottom = 225.0
+rect_min_size = Vector2( 400, 450 )
+color = Color( 0.231373, 0.231373, 0.231373, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 35
+custom_constants/margin_top = 35
+custom_constants/margin_left = 35
+custom_constants/margin_bottom = 35
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" type="VBoxContainer" parent="Background/Margin"]
+margin_left = 35.0
+margin_top = 35.0
+margin_right = 365.0
+margin_bottom = 415.0
+custom_constants/separation = 20
+
+[node name="Title" type="Label" parent="Background/Margin/Login"]
+margin_right = 330.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 1 )
+text = "Login Screen"
+align = 1
+valign = 1
+
+[node name="Username" type="LineEdit" parent="Background/Margin/Login"]
+margin_top = 70.0
+margin_right = 330.0
+margin_bottom = 103.0
+custom_fonts/font = ExtResource( 2 )
+placeholder_text = "Username"
+
+[node name="Password" type="LineEdit" parent="Background/Margin/Login"]
+margin_top = 123.0
+margin_right = 330.0
+margin_bottom = 156.0
+custom_fonts/font = ExtResource( 2 )
+secret = true
+placeholder_text = "Password"
+
+[node name="Filler" type="Panel" parent="Background/Margin/Login"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 176.0
+margin_right = 330.0
+margin_bottom = 209.0
+rect_min_size = Vector2( 0, 33 )
+
+[node name="LoginButton" type="Button" parent="Background/Margin/Login"]
+margin_left = 55.0
+margin_top = 229.0
+margin_right = 275.0
+margin_bottom = 284.0
+rect_min_size = Vector2( 220, 55 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 1 )
+text = "Login"
+
+[node name="CreateAccountButton" type="Button" parent="Background/Margin/Login"]
+margin_left = 55.0
+margin_top = 304.0
+margin_right = 275.0
+margin_bottom = 359.0
+rect_min_size = Vector2( 220, 55 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 1 )
+text = "Create Account"
+
+[node name="CreateAccount" type="VBoxContainer" parent="Background/Margin"]
+visible = false
+margin_left = 35.0
+margin_top = 35.0
+margin_right = 365.0
+margin_bottom = 415.0
+custom_constants/separation = 20
+
+[node name="Title" type="Label" parent="Background/Margin/CreateAccount"]
+margin_right = 330.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 1 )
+text = "Create account"
+align = 1
+valign = 1
+
+[node name="Email" type="LineEdit" parent="Background/Margin/CreateAccount"]
+margin_top = 70.0
+margin_right = 330.0
+margin_bottom = 103.0
+custom_fonts/font = ExtResource( 2 )
+placeholder_text = "Email address"
+
+[node name="Password" type="LineEdit" parent="Background/Margin/CreateAccount"]
+margin_top = 123.0
+margin_right = 330.0
+margin_bottom = 156.0
+custom_fonts/font = ExtResource( 2 )
+secret = true
+placeholder_text = "Password"
+
+[node name="RepeatPassword" type="LineEdit" parent="Background/Margin/CreateAccount"]
+margin_top = 176.0
+margin_right = 330.0
+margin_bottom = 209.0
+custom_fonts/font = ExtResource( 2 )
+secret = true
+placeholder_text = "Repeat password"
+
+[node name="CreateButton" type="Button" parent="Background/Margin/CreateAccount"]
+margin_left = 55.0
+margin_top = 229.0
+margin_right = 275.0
+margin_bottom = 284.0
+rect_min_size = Vector2( 220, 55 )
+size_flags_horizontal = 4
+custom_fonts/font = ExtResource( 5 )
+text = "Create"
+
+[node name="BackButton" type="Button" parent="Background/Margin/CreateAccount"]
+margin_left = 55.0
+margin_top = 304.0
+margin_right = 275.0
+margin_bottom = 359.0
+rect_min_size = Vector2( 220, 55 )
+size_flags_horizontal = 4
+custom_fonts/font = ExtResource( 5 )
+text = "Back"
+
+[connection signal="pressed" from="Background/Margin/Login/LoginButton" to="." method="_on_LoginButton_pressed"]
+[connection signal="pressed" from="Background/Margin/Login/CreateAccountButton" to="." method="_on_CreateAccountButton_pressed"]
+[connection signal="pressed" from="Background/Margin/CreateAccount/CreateButton" to="." method="_on_CreateButton_pressed"]
+[connection signal="pressed" from="Background/Margin/CreateAccount/BackButton" to="." method="_on_BackButton_pressed"]
