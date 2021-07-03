@@ -1,0 +1,19 @@
+{
+	"Stats": {
+        "Class": "Regular",
+        "Race": "Human",
+        "Level": 1,
+        "Experience": 0,
+        "StatPoints": 50,
+        "Reputation": 0,
+		"Health": 0,
+		"Strength": 0,
+		"Defense": 0,
+		"Speed": 0,
+		"Stamina": 0,
+		"Endurance": 0,
+		"Dexterity": 0,
+		"Accuracy": 0,
+		"Luck": 0
+	}
+}

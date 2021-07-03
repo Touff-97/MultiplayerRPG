@@ -1,0 +1,170 @@
+{
+	"Utility": {
+		"0": {
+			"Name": "Fishing",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+        "1": {
+			"Name": "Mining",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"2": {
+			"Name": "Digging",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"3": {
+			"Name": "Woodcutting",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"4": {
+			"Name": "Cooking",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"5": {
+			"Name": "Farming",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"6": {
+			"Name": "Smithing",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"7": {
+			"Name": "Husbandry",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"8": {
+			"Name": "Cartography",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		}
+	},
+	"Combat": {
+		"0": {
+			"Name": "LightArmor",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"1": {
+			"Name": "HeavyArmor",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"2": {
+			"Name": "OneHanded",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"3": {
+			"Name": "TwoHanded",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"4": {
+			"Name": "BasicRanged",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"5": {
+			"Name": "MidRanged",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"6": {
+			"Name": "FireWeapons",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"7": {
+			"Name": "Traps",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"8": {
+			"Name": "Blocking",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		}
+	},
+	"Magic": {
+		"0": {
+			"Name": "Alchemist",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"1": {
+			"Name": "Wizard",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"2": {
+			"Name": "Artificer",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"3": {
+			"Name": "Necromancer",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"4": {
+			"Name": "Saint",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"5": {
+			"Name": "Karmic",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"6": {
+			"Name": "Summoner",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"7": {
+			"Name": "Brewer",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		},
+		"8": {
+			"Name": "Enchanter",
+			"Stage": "Beginner",
+			"Level": "I",
+			"Experience": 0
+		}
+	}
+}
