@@ -19,18 +19,18 @@ color = Color( 0.482353, 0.482353, 0.482353, 1 )
 
 [node name="Values" type="VBoxContainer" parent="."]
 margin_left = 60.0
-margin_right = 360.0
+margin_right = 270.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
 custom_constants/separation = 0
 alignment = 1
 
 [node name="HBox" type="HBoxContainer" parent="Values"]
-margin_right = 300.0
+margin_right = 210.0
 margin_bottom = 23.0
 
 [node name="Skill" type="Label" parent="Values/HBox"]
-margin_right = 234.0
+margin_right = 144.0
 margin_bottom = 23.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
@@ -38,8 +38,8 @@ text = "Skill"
 valign = 2
 
 [node name="Stage" type="Label" parent="Values/HBox"]
-margin_left = 238.0
-margin_right = 300.0
+margin_left = 148.0
+margin_right = 210.0
 margin_bottom = 23.0
 rect_min_size = Vector2( 0, 23 )
 custom_fonts/font = ExtResource( 1 )
@@ -48,7 +48,7 @@ valign = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="Values"]
 margin_top = 23.0
-margin_right = 300.0
+margin_right = 210.0
 margin_bottom = 39.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 1 )

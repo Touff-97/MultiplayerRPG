@@ -1,0 +1,264 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Fonts/Montserrat_24.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Fonts/Montserrat_18.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenes/SupportScenes/ToolTip.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="ToolTip" type="Popup"]
+margin_right = -980.0
+margin_bottom = -492.0
+rect_min_size = Vector2( 300, 230 )
+mouse_filter = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.901961 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.168627, 0.168627, 0.168627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_constants/margin_right = 15
+custom_constants/margin_top = 20
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="Background/Margin"]
+margin_left = 15.0
+margin_top = 20.0
+margin_right = 285.0
+margin_bottom = 212.0
+custom_constants/separation = 7
+
+[node name="ItemName" type="Label" parent="Background/Margin/VBox"]
+margin_right = 270.0
+margin_bottom = 31.0
+custom_fonts/font = ExtResource( 1 )
+text = "Item Name"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="Background/Margin/VBox"]
+margin_top = 38.0
+margin_right = 270.0
+margin_bottom = 42.0
+mouse_filter = 2
+
+[node name="Stat1" type="HBoxContainer" parent="Background/Margin/VBox"]
+margin_top = 49.0
+margin_right = 270.0
+margin_bottom = 72.0
+custom_constants/separation = 5
+
+[node name="Filler" type="Panel" parent="Background/Margin/VBox/Stat1"]
+margin_right = 30.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 30, 0 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="Stat" type="Label" parent="Background/Margin/VBox/Stat1"]
+margin_left = 35.0
+margin_right = 184.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Value" type="Label" parent="Background/Margin/VBox/Stat1"]
+margin_left = 189.0
+margin_right = 237.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 48, 0 )
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Difference" type="Label" parent="Background/Margin/VBox/Stat1"]
+margin_left = 242.0
+margin_right = 242.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Filler2" type="Panel" parent="Background/Margin/VBox/Stat1"]
+margin_left = 247.0
+margin_right = 270.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 23, 0 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="Stat2" type="HBoxContainer" parent="Background/Margin/VBox"]
+margin_top = 79.0
+margin_right = 270.0
+margin_bottom = 102.0
+custom_constants/separation = 5
+
+[node name="Filler" type="Panel" parent="Background/Margin/VBox/Stat2"]
+margin_right = 30.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 30, 0 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="Stat" type="Label" parent="Background/Margin/VBox/Stat2"]
+margin_left = 35.0
+margin_right = 184.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Value" type="Label" parent="Background/Margin/VBox/Stat2"]
+margin_left = 189.0
+margin_right = 237.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 48, 0 )
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Difference" type="Label" parent="Background/Margin/VBox/Stat2"]
+margin_left = 242.0
+margin_right = 242.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Filler2" type="Panel" parent="Background/Margin/VBox/Stat2"]
+margin_left = 247.0
+margin_right = 270.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 23, 0 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="Stat3" type="HBoxContainer" parent="Background/Margin/VBox"]
+margin_top = 109.0
+margin_right = 270.0
+margin_bottom = 132.0
+custom_constants/separation = 5
+
+[node name="Filler" type="Panel" parent="Background/Margin/VBox/Stat3"]
+margin_right = 30.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 30, 0 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="Stat" type="Label" parent="Background/Margin/VBox/Stat3"]
+margin_left = 35.0
+margin_right = 184.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Value" type="Label" parent="Background/Margin/VBox/Stat3"]
+margin_left = 189.0
+margin_right = 237.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 48, 0 )
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Difference" type="Label" parent="Background/Margin/VBox/Stat3"]
+margin_left = 242.0
+margin_right = 242.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Filler2" type="Panel" parent="Background/Margin/VBox/Stat3"]
+margin_left = 247.0
+margin_right = 270.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 23, 0 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="Stat4" type="HBoxContainer" parent="Background/Margin/VBox"]
+margin_top = 139.0
+margin_right = 270.0
+margin_bottom = 162.0
+custom_constants/separation = 5
+
+[node name="Filler" type="Panel" parent="Background/Margin/VBox/Stat4"]
+margin_right = 30.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 30, 0 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="Stat" type="Label" parent="Background/Margin/VBox/Stat4"]
+margin_left = 35.0
+margin_right = 184.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Value" type="Label" parent="Background/Margin/VBox/Stat4"]
+margin_left = 189.0
+margin_right = 237.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 48, 0 )
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Difference" type="Label" parent="Background/Margin/VBox/Stat4"]
+margin_left = 242.0
+margin_right = 242.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Filler2" type="Panel" parent="Background/Margin/VBox/Stat4"]
+margin_left = 247.0
+margin_right = 270.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 23, 0 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="Stat5" type="HBoxContainer" parent="Background/Margin/VBox"]
+margin_top = 169.0
+margin_right = 270.0
+margin_bottom = 192.0
+custom_constants/separation = 5
+
+[node name="Filler" type="Panel" parent="Background/Margin/VBox/Stat5"]
+margin_right = 30.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 30, 0 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+
+[node name="Stat" type="Label" parent="Background/Margin/VBox/Stat5"]
+margin_left = 35.0
+margin_right = 184.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Value" type="Label" parent="Background/Margin/VBox/Stat5"]
+margin_left = 189.0
+margin_right = 237.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 48, 0 )
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Difference" type="Label" parent="Background/Margin/VBox/Stat5"]
+margin_left = 242.0
+margin_right = 242.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 2 )
+
+[node name="Filler2" type="Panel" parent="Background/Margin/VBox/Stat5"]
+margin_left = 247.0
+margin_right = 270.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 23, 0 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )

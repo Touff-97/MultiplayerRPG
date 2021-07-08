@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Fonts/Montserrat_18.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/SupportScenes/ItemSplitPopup.gd" type="Script" id=2]
+
+[node name="ItemSplitPopup" type="Popup"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 300, 100 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.901961 )
+margin_bottom = -20.0
+rect_min_size = Vector2( 300, 80 )
+color = Color( 0.168627, 0.168627, 0.168627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Margin" type="MarginContainer" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="Background/Margin"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 290.0
+margin_bottom = 70.0
+custom_constants/separation = 10
+
+[node name="Amount" type="LineEdit" parent="Background/Margin/HBox"]
+margin_right = 150.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 150, 60 )
+custom_fonts/font = ExtResource( 1 )
+align = 1
+placeholder_text = " Split Amount "
+
+[node name="Confirm" type="Button" parent="Background/Margin/HBox"]
+margin_left = 160.0
+margin_right = 280.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Confirm"
+
+[connection signal="pressed" from="Background/Margin/HBox/Confirm" to="." method="_on_Confirm_pressed"]

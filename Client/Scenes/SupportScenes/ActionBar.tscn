@@ -47,14 +47,14 @@ __meta__ = {
 [node name="VBox" type="VBoxContainer" parent="Margin"]
 margin_left = 200.0
 margin_top = 500.0
-margin_right = 1080.0
+margin_right = 1079.0
 margin_bottom = 592.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ActionBar" type="Label" parent="Margin/VBox"]
-margin_right = 880.0
+margin_right = 879.0
 margin_bottom = 23.0
 custom_fonts/font = ExtResource( 2 )
 text = "Regular - Level 1 -  Swordsmanship"
@@ -62,9 +62,9 @@ align = 1
 valign = 1
 
 [node name="ExperienceBar" type="ProgressBar" parent="Margin/VBox"]
-margin_left = 190.0
+margin_left = 189.0
 margin_top = 27.0
-margin_right = 690.0
+margin_right = 689.0
 margin_bottom = 43.0
 rect_min_size = Vector2( 500, 0 )
 mouse_filter = 2
@@ -78,9 +78,9 @@ __meta__ = {
 }
 
 [node name="SkillBar" type="ProgressBar" parent="Margin/VBox"]
-margin_left = 240.0
+margin_left = 239.0
 margin_top = 47.0
-margin_right = 640.0
+margin_right = 639.0
 margin_bottom = 63.0
 rect_min_size = Vector2( 400, 0 )
 mouse_filter = 2
@@ -95,9 +95,9 @@ __meta__ = {
 }
 
 [node name="Hearts" type="TextureRect" parent="Margin/VBox"]
-margin_left = 411.0
+margin_left = 410.0
 margin_top = 67.0
-margin_right = 469.0
+margin_right = 468.0
 margin_bottom = 92.0
 rect_min_size = Vector2( 58, 0 )
 size_flags_horizontal = 4

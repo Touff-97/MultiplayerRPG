@@ -15,10 +15,6 @@ onready var accuracy = $Background/Margin/VBox/Stats/Accuracy/Values/StatValue
 onready var luck = $Background/Margin/VBox/Stats/Luck/Values/StatValue
 
 
-func _ready() -> void:
-	visible = false
-
-
 func _physics_process(_delta: float) -> void:
 	for plus in get_tree().get_nodes_in_group("plus"):
 		if int(stat_points.get_text()) == 0:
@@ -32,12 +28,6 @@ func _physics_process(_delta: float) -> void:
 			minus.disabled = true
 		else:
 			minus.disabled = false
-
-
-func _unhandled_key_input(event: InputEventKey) -> void:
-	if event.is_action_pressed("stats"):
-		Server.FetchPlayerStats()
-		visible = !visible
 
 
 func LoadPlayerStats(stats: Dictionary) -> void:

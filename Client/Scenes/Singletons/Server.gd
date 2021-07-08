@@ -81,6 +81,7 @@ remote func ReturnTokenVerificationResults(result: bool) -> void:
 		get_node("../SceneHandler/Map/Objects/Player").set_physics_process(true)
 		get_node("../SceneHandler/Map/GUI/ActionBar").set_physics_process(true)
 		get_node("../SceneHandler/Map/GUI/ActionBar").visible = true
+		FetchInventoryData()
 		print("Succesful token verification")
 	else:
 		print("Login failed, please try again")
@@ -105,13 +106,11 @@ remote func DespawnPlayer(player_id) -> void:
 
 
 func FetchPlayerSkillTree() -> void:
-	print("Fetching skill tree from server")
 	rpc_id(1, "FetchPlayerSkillTree")
 
 
 remote func ReturnPlayerSkillTree(player_skill_tree: Dictionary) -> void:
-	print("Returning fetched skill tree")
-	get_node("/root/SceneHandler/Map/GUI/SkillTree").LoadPlayerSkillTree(player_skill_tree)
+	get_node("/root/SceneHandler/Map/GUI").LoadPlayerSkillTree(player_skill_tree)
 
 
 func FetchSkillDamage(skill_name: String, requester) -> void:
@@ -127,10 +126,17 @@ func FetchPlayerStats() -> void:
 
 
 remote func ReturnPlayerStats(stats) -> void:
-	get_node("/root/SceneHandler/Map/GUI/PlayerStats").LoadPlayerStats(stats)
+	get_node("/root/SceneHandler/Map/GUI").LoadPlayerStats(stats)
 	get_node("/root/SceneHandler/Map/GUI/ActionBar").LoadPlayerStats(stats)
 
 
 func SetStat(stat: String, new_value: int) -> void:
-	print("Sending stat to server")
 	rpc_id(1, "SetStat", stat, new_value)
+
+
+func FetchInventoryData() -> void:
+	rpc_id(1, "FetchInventoryData")
+
+
+remote func ReturnInventoryData(equipment: Dictionary, inventory: Dictionary, hotbar: Dictionary, item_data: Dictionary) -> void:
+	get_node("/root/SceneHandler/Map/GUI").LoadInventoryData(equipment, inventory, hotbar, item_data)
