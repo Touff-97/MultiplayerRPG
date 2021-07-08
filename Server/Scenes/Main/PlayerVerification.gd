@@ -58,3 +58,6 @@ func CreatePlayerContainer(player_id):
 func FillPlayerContainer(player_container):
 	player_container.player_stats = ServerData.stat_data.Stats
 	player_container.player_skill_tree = ServerData.skill_tree_data
+	player_container.player_equipment = ServerData.equipment_data
+	player_container.player_inventory = ServerData.inventory_data
+	player_container.player_hotbar = ServerData.hotbar_data

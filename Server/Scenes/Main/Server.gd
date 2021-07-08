@@ -91,7 +91,6 @@ func SendWorldState(world_state: Dictionary) -> void:
 remote func FetchPlayerSkillTree() -> void:
 	var player_id = get_tree().get_rpc_sender_id()
 	var player_skill_tree = get_node(str(player_id)).player_skill_tree
-	print("Skill tree fetched")
 	rpc_id(player_id, "ReturnPlayerSkillTree", player_skill_tree)
 
 
@@ -110,3 +109,12 @@ remote func FetchPlayerStats() -> void:
 remote func SetStat(stat, new_value) -> void:
 	var player_id = get_tree().get_rpc_sender_id()
 	get_node(str(player_id)).player_stats[stat] = new_value
+
+
+remote func FetchInventoryData() -> void:
+	var player_id = get_tree().get_rpc_sender_id()
+	var equipment = get_node(str(player_id)).player_equipment
+	var inventory = get_node(str(player_id)).player_inventory
+	var hotbar = get_node(str(player_id)).player_hotbar
+	var item_data = ServerData.item_data
+	rpc_id(player_id, "ReturnInventoryData", equipment, inventory, hotbar, item_data)

@@ -1,0 +1,146 @@
+{
+	"Inv1": {
+		"Item": 10001,
+		"Stack": 1
+	},
+	"Inv2": {
+		"Item": 10009,
+		"Stack": 1
+	},
+	"Inv3": {
+		"Item": 10010,
+		"Stack": 1
+	},
+	"Inv4": {
+		"Item": 10004,
+		"Stack": 1
+	},
+	"Inv5": {
+		"Item": 10003,
+		"Stack": 1
+	},
+	"Inv6": {
+		"Item": 10006,
+		"Stack": 3
+	},
+	"Inv7": {
+		"Item": 10002,
+		"Stack": 1
+	},
+	"Inv8": {
+		"Item": 10007,
+		"Stack": 2
+	},
+	"Inv9": {
+		"Item": 10008,
+		"Stack": 5
+	},
+	"Inv10": {
+		"Item": 10007,
+		"Stack": 1
+	},
+	"Inv11": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv12": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv13": {
+		"Item": 10005,
+		"Stack": 1
+	},
+	"Inv14": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv15": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv16": {
+		"Item": 10006,
+		"Stack": 6
+	},
+	"Inv17": {
+		"Item": 10006,
+		"Stack": 1
+	},
+	"Inv18": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv19": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv20": {
+		"Item": 10006,
+		"Stack": 3
+	},
+	"Inv21": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv22": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv23": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv24": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv25": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv26": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv27": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv28": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv29": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv30": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv31": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv32": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv33": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv34": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv35": {
+		"Item": null,
+		"Stack": null
+	},
+	"Inv36": {
+		"Item": null,
+		"Stack": null
+	}
+}

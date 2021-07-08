@@ -1,0 +1,34 @@
+{
+	"Hotbar1": {
+		"Item": null,
+		"Stack": null
+	},
+	"Hotbar2": {
+		"Item": 10003,
+		"Stack": 1
+	},
+	"Hotbar3": {
+		"Item": null,
+		"Stack": null
+	},
+	"Hotbar4": {
+		"Item": null,
+		"Stack": null
+	},
+	"Hotbar5": {
+		"Item": null,
+		"Stack": null
+	},
+	"Hotbar6": {
+		"Item": 10006,
+		"Stack": 3
+	},
+	"Hotbar7": {
+		"Item": null,
+		"Stack": null
+	},
+	"Hotbar8": {
+		"Item": 10007,
+		"Stack": 2
+	}
+}
